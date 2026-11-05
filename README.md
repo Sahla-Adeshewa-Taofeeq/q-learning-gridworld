@@ -42,9 +42,9 @@ The plot shows how many steps the agent needs to reach the goal in each episode.
 ## Part 2: Value Iteration
 
 Value iteration is a model-based method. It uses the environment's rules directly and applies the Bellman equation until the values stop changing. There is no trial and error. Result:
-
+```
 Value iteration result: [ 4.58  6.2   8.   10.    0.  ]
-
+```
 These exact state values can be compared with the maximum Q-values the Q-learning agent learns.
 
 ## Part 3: Energy Extension
@@ -60,7 +60,7 @@ In energy_extension.py, the agent has no goal. It has a body-like internal need 
 
 ### Results
 
-
+```
 Learned action for each (position, energy):
 energy ->  1       2       3       4       5
 pos 0:   stay    right   stay    right   right
@@ -68,10 +68,12 @@ pos 1:   left    right   right   right   right
 pos 2:   right   right   right   right   right
 pos 3:   right   right   right   right   right
 pos 4:   right   right   right   right   right
-
+```
 Energy over time in a test run from position 0 with full energy:
 
+```
 Energy over time: [5, 4, 3, 2, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+```
 
 The agent learns to walk to the food and stay there, keeping its energy near full. Its behaviour comes from an internal need instead of a goal location. Some low-energy states far from the food show arbitrary actions because the agent cannot reach food in time from there.
 
